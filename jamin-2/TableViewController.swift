@@ -10,7 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
 
-    var toDoItems = ["one", "two", "three"]
+    var toDoItems = ["one", "two", "threethree threethr eethreet hreethreethree threethreet  hreethree three"]
     var checkedItems = [NSIndexPath : Bool]()
 
     override func viewDidLoad() {
@@ -21,6 +21,8 @@ class TableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.estimatedRowHeight = 44
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,10 +50,10 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ToDoTableViewCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ToDoTableViewCell", forIndexPath: indexPath) as TableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = toDoItems[indexPath.row]
+        cell.toDoLabel?.text = toDoItems[indexPath.row]
         if let checkItem = checkedItems[indexPath] {
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
         }

@@ -14,6 +14,7 @@
 		F7EC6B5B1A82FFAF0010C7BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7EC6B591A82FFAF0010C7BB /* LaunchScreen.xib */; };
 		F7EC6B671A82FFAF0010C7BB /* jamin_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EC6B661A82FFAF0010C7BB /* jamin_2Tests.swift */; };
 		F7EC6B731A8303E60010C7BB /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EC6B721A8303E60010C7BB /* TableViewController.swift */; };
+		F7EC6B751A8310DB0010C7BB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7EC6B741A8310DB0010C7BB /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		F7EC6B651A82FFAF0010C7BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7EC6B661A82FFAF0010C7BB /* jamin_2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = jamin_2Tests.swift; sourceTree = "<group>"; };
 		F7EC6B721A8303E60010C7BB /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F7EC6B741A8310DB0010C7BB /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				F7EC6B521A82FFAF0010C7BB /* ViewController.swift */,
 				F7EC6B541A82FFAF0010C7BB /* Main.storyboard */,
 				F7EC6B721A8303E60010C7BB /* TableViewController.swift */,
+				F7EC6B741A8310DB0010C7BB /* TableViewCell.swift */,
 				F7EC6B571A82FFAF0010C7BB /* Images.xcassets */,
 				F7EC6B591A82FFAF0010C7BB /* LaunchScreen.xib */,
 				F7EC6B4E1A82FFAF0010C7BB /* Supporting Files */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7EC6B531A82FFAF0010C7BB /* ViewController.swift in Sources */,
+				F7EC6B751A8310DB0010C7BB /* TableViewCell.swift in Sources */,
 				F7EC6B731A8303E60010C7BB /* TableViewController.swift in Sources */,
 				F7EC6B511A82FFAF0010C7BB /* AppDelegate.swift in Sources */,
 			);

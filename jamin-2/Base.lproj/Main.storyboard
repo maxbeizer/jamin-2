@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -47,11 +48,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoTableViewCell" id="uDW-8L-sXy">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoTableViewCell" id="uDW-8L-sXy" customClass="TableViewCell" customModule="jamin_2" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uDW-8L-sXy" id="Qnb-wr-rdf">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-ZB-GWN">
+                                            <rect key="frame" x="12" y="11" width="570" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="2D3-ZB-GWN" secondAttribute="bottom" constant="4" id="6Ch-Ti-HPZ"/>
+                                        <constraint firstItem="2D3-ZB-GWN" firstAttribute="top" secondItem="Qnb-wr-rdf" secondAttribute="topMargin" constant="3" id="Py9-2G-NNx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2D3-ZB-GWN" secondAttribute="trailing" constant="10" id="bMT-7j-xVK"/>
+                                        <constraint firstItem="2D3-ZB-GWN" firstAttribute="leading" secondItem="Qnb-wr-rdf" secondAttribute="leadingMargin" constant="4" id="g7u-cK-9WV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="toDoLabel" destination="2D3-ZB-GWN" id="wcz-EI-fJH"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
