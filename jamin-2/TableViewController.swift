@@ -11,6 +11,7 @@ import UIKit
 class TableViewController: UITableViewController {
 
     var toDoItems = ["one", "two", "three"]
+    var checkedItems = [NSIndexPath : Bool]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +52,34 @@ class TableViewController: UITableViewController {
 
         // Configure the cell...
         cell.textLabel?.text = toDoItems[indexPath.row]
+        if let checkItem = checkedItems[indexPath] {
+            cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        }
+        else {
+            cell.accessoryType = UITableViewCellAccessoryType.None
+        }
 
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if let checkItem = checkedItems[indexPath] {
+            checkedItems[indexPath] = nil
+        }
+        else {
+            checkedItems[indexPath] = true
+        }
+        
+        CATransaction.begin()
+        CATransaction.setCompletionBlock { () -> Void in
+            tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.None)
+        }
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        CATransaction.commit()
+
     }
 
 

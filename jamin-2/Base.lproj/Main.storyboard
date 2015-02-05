@@ -38,7 +38,7 @@
             </objects>
             <point key="canvasLocation" x="280" y="259"/>
         </scene>
-        <!--Table View Controller-->
+        <!--To Do Items-->
         <scene sceneID="Tto-kH-548">
             <objects>
                 <tableViewController id="S84-Zx-n7V" customClass="TableViewController" customModule="jamin_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                             <outlet property="delegate" destination="S84-Zx-n7V" id="jub-QK-ocf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="W5B-KR-jTa">
+                    <navigationItem key="navigationItem" title="To Do Items" id="W5B-KR-jTa">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="8SD-qD-aXE">
                             <connections>
                                 <action selector="doneButtonTapped:" destination="S84-Zx-n7V" id="8Oh-KV-zmr"/>
